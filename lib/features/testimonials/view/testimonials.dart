@@ -14,12 +14,15 @@ class TestimonialsSection extends StatelessWidget {
     return Padding(
       padding: EdgeInsets.symmetric(
         horizontal: isSmall ? smallHorizontalPadding : horizontalPadding,
+        vertical: 50,
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          MainLabelText(
-            label: AppLocalizations.of(context)!.translate('testimonials')!,
+          BigText(
+            text:
+                AppLocalizations.of(context)?.translate('testimonials') ??
+                'testimonials',
           ),
           const SizedBox(height: 20),
           const TestimonialList(),

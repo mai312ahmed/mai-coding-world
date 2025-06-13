@@ -9,7 +9,7 @@ class MainLabelText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      AppLocalizations.of(context)!.translate(label) ?? label,
+      AppLocalizations.of(context)?.translate(label) ?? label,
       style: TextStyle(fontWeight: FontWeight.w500, fontSize: 18),
     );
   }
@@ -33,7 +33,7 @@ class LabelText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      AppLocalizations.of(context)!.translate(label) ?? label,
+      AppLocalizations.of(context)?.translate(label) ?? label,
       maxLines: maxLines,
       overflow: overflow,
       softWrap: softWrap,
@@ -63,7 +63,7 @@ class DescreptionText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      AppLocalizations.of(context)!.translate(text) ?? text,
+      AppLocalizations.of(context)?.translate(text) ?? text,
       maxLines: maxLines,
       overflow: overflow,
       textAlign: textAlign,
@@ -92,7 +92,7 @@ class BigText extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
-      AppLocalizations.of(context)!.translate(text) ?? text,
+      AppLocalizations.of(context)?.translate(text) ?? text,
       maxLines: maxLines,
       overflow: overflow,
       textAlign: textAlign,
@@ -106,14 +106,30 @@ class BigText extends StatelessWidget {
 }
 
 class BoldLable extends StatelessWidget {
-  const BoldLable({super.key, this.color, required this.lable});
+  const BoldLable({
+    super.key,
+    this.color,
+    required this.lable,
+    this.maxLines,
+    this.overflow,
+    this.fontSize = 18,
+  });
+  final double fontSize;
   final String lable;
   final Color? color;
+  final int? maxLines;
+  final TextOverflow? overflow;
   @override
   Widget build(BuildContext context) {
     return Text(
-      lable,
-      style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold, color: color),
+      AppLocalizations.of(context)?.translate(lable) ?? lable,
+      maxLines: maxLines,
+      overflow: overflow,
+      style: TextStyle(
+        fontSize: fontSize,
+        fontWeight: FontWeight.bold,
+        color: color,
+      ),
     );
   }
 }

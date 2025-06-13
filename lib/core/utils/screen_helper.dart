@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class ScreenHelper {
-  static const double mobile = 600;
-  static const double tablet = 1024;
-  static const double desktop = 1440;
+  static const double mobile = 550;
+  static const double tablet = 600;
+  static const double desktop = 900;
 
   static bool isSmall(BuildContext context) =>
       MediaQuery.of(context).size.width < tablet;

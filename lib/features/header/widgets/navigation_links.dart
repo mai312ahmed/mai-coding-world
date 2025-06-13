@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:mai_coding_world/core/constants/app_constans.dart';
 import 'package:mai_coding_world/core/widgets/app_texts.dart';
+import 'package:mai_coding_world/cubits/navigation_cubit.dart';
 
 class NavigationLinks extends StatelessWidget {
   const NavigationLinks({super.key});
 
   @override
   Widget build(BuildContext context) {
-    final links = [
-      {'label': 'aboutMe', 'id': 'about'},
-      {'label': 'projects', 'id': 'projects'},
-      {'label': 'resume', 'id': 'resume'},
-      {'label': 'testimonials', 'id': 'testimonials'},
-    ];
+    final navCubit = context.read<NavigationCubit>();
 
     return Row(
       children:
@@ -19,11 +17,8 @@ class NavigationLinks extends StatelessWidget {
             return Padding(
               padding: const EdgeInsets.symmetric(horizontal: 12),
               child: GestureDetector(
-                onTap: () {
-                  // TODO: Scroll to section by id
-                  debugPrint("Navigate to ${link['id']}");
-                },
-                child: LabelText(label: link['label']!),
+                onTap: () => navCubit.scrollToSection(link.id),
+                child: LabelText(label: link.label),
               ),
             );
           }).toList(),

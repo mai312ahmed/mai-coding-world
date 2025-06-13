@@ -11,8 +11,49 @@ class TestimonialList extends StatelessWidget {
         TestimonialCard(
           name: 'Ahmed Ali',
           date: '2023-02-10',
+          content: 'Working with Omar',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
+          content:
+              'Working with Omar was a pleasure. He\'s skilled, professional, and always willing to go the extra mile. His attention to detail is impressive.Working with Omar was a pleasure. He\'s skilled, professional, and always willing to go the extra mile. His attention to detail is impressive.',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
           content:
               'Working with Omar was a pleasure. He\'s skilled, professional, and always willing to go the extra mile. His attention to detail is impressive.',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
+          content:
+              'Working with Omar was a pleasure. He\'s skilled, professional, and always willing to go the extra mile. His attention to detail is impressive.',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
+          content:
+              'Working with Omar was a pleasure. He\'s skilled, professional, and alwayextra mile. His attention to detail is impressive.',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
+          content:
+              'Working with Omar was a pleasure. He\'s skilled, professiois attention to detail is impressive.',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
+          content:
+              'Working with Omar was a pleasure. He\'s skilled, professional, and always willing to go the extra mile. His aalways willing to go the extra mile. His attention to detail is impressive.',
+        ),
+        TestimonialCard(
+          name: 'Ahmed Ali',
+          date: '2023-02-10',
+          content:
+              'Workg to go the extra mile. His attention to detail is impressive.',
         ),
         TestimonialCard(
           name: 'Ahmed Ali',

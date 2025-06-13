@@ -18,7 +18,7 @@ class Header extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 30, vertical: 16),
       child:
-          isSmall
+          isSmall || isTablet
               ? Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
@@ -32,7 +32,7 @@ class Header extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: 15),
-                  const NavigationLinks(),
+                  NavigationLinks(),
                 ],
               )
               : Row(
@@ -41,7 +41,7 @@ class Header extends StatelessWidget {
                   const SizedBox(width: 10),
                   MainLabelText(label: "portfolio"),
                   const Spacer(),
-                  const NavigationLinks(),
+                  NavigationLinks(),
                   if (isTablet) const SizedBox(width: 8),
                   if (isDesktop) const SizedBox(width: 24),
                   Buttons(),

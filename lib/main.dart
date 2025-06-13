@@ -27,16 +27,12 @@ class FirebaseInitializer {
 
   static Future<void> _initializeWeb() async {
     try {
-      // تأخير إضافي للويب
       await Future.delayed(const Duration(milliseconds: 500));
 
-      // تهيئة صريحة مع اسم التطبيق
       await Firebase.initializeApp(
         options: DefaultFirebaseOptions.currentPlatform,
         name: 'WebApp',
       );
-
-      // تأكيد التهيئة
       final app = Firebase.app('WebApp');
       log('Firebase Web App: ${app.name}');
       _completer.complete();
@@ -49,7 +45,6 @@ class FirebaseInitializer {
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // ⭐ الاستخدام في كل المشروع
   await FirebaseInitializer.ensureInitialized();
 
   runApp(const MyApp());
@@ -71,6 +66,9 @@ class MyApp extends StatelessWidget {
               colorScheme: ColorScheme.fromSeed(
                 seedColor: Colors.grey,
                 brightness: Brightness.dark,
+              ),
+              textTheme: ThemeData.dark().textTheme.apply(
+                fontFamily: state.locale == 'ar' ? 'Tajawal' : null,
               ),
             ),
             locale: Locale(state.locale),

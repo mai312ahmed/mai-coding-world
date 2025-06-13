@@ -90,7 +90,7 @@ final List<ProjectModel> projects = [
     projectUrl: 'https://github.com/yourusername/food-delivery',
   ),
   ProjectModel(
-    title: 'E-Commerce Dashboard',
+    title: 'E-Commerce Dashboard kjljlk kj;lk; j',
     description:
         'An admin dashboard to manage products, users, and orders for an e-commerce platform.',
     imageUrl: [

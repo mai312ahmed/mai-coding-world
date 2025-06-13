@@ -1,4 +1,3 @@
-import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:mai_coding_world/core/widgets/app_texts.dart';
 import 'package:mai_coding_world/models/project_model.dart';
@@ -11,7 +10,7 @@ class TechnologiesSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BoldLable(lable: 'Technologies Used'),
+        BoldLable(lable: "label_technologies_used"),
         const SizedBox(height: 12),
         Wrap(
           spacing: 10,

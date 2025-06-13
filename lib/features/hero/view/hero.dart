@@ -10,7 +10,8 @@ class HeroSection extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final screenWidth = MediaQuery.of(context).size.width;
-    final isSmall = screenWidth < ScreenHelper.tablet;
+    final isSmall = ScreenHelper.isSmall(context);
+    final isTablet = ScreenHelper.isTablet(context);
 
     return Padding(
       padding: EdgeInsets.symmetric(
@@ -18,7 +19,7 @@ class HeroSection extends StatelessWidget {
         horizontal: isSmall ? smallHorizontalPadding : horizontalPadding,
       ),
       child:
-          isSmall
+          isSmall || isTablet
               ? Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
@@ -27,7 +28,7 @@ class HeroSection extends StatelessWidget {
                       ImageSection(radius: screenWidth / 8),
                       SizedBox(
                         width: screenWidth - 200,
-                        child: TextsSection(isSmall: isSmall),
+                        child: TextsSection(isSmall: isSmall || isTablet),
                       ),
                     ],
                   ),
@@ -37,8 +38,8 @@ class HeroSection extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
-                    width: screenWidth / 2,
-                    child: TextsSection(isSmall: isSmall),
+                    width: (screenWidth / 2) - 15,
+                    child: TextsSection(isSmall: isSmall || isTablet),
                   ),
                   ImageSection(radius: screenWidth / 8),
                 ],

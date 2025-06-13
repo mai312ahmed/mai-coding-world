@@ -12,7 +12,7 @@ class FeaturesSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        BoldLable(lable: 'Features'),
+        BoldLable(lable: "label_features"),
         const SizedBox(height: 12),
         ...project.features.map(
           (f) => Row(

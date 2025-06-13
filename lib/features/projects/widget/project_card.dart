@@ -67,10 +67,11 @@ class ProjectCard extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  LabelText(
-                    label: project.title,
+                  const SizedBox(height: 8),
+                  BoldLable(
+                    lable: project.title,
                     color: Colors.black,
-
+                    fontSize: 16,
                     maxLines: 1,
                     overflow: TextOverflow.ellipsis,
                   ),
@@ -85,8 +86,8 @@ class ProjectCard extends StatelessWidget {
                       overflow: TextOverflow.ellipsis,
                     ),
                   ),
-                  TextButton(
-                    onPressed: () {
+                  GestureDetector(
+                    onTap: () {
                       Navigator.push(
                         context,
                         MaterialPageRoute(
@@ -98,13 +99,8 @@ class ProjectCard extends StatelessWidget {
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
-                        Text(
-                          'View Details',
-                          style: TextStyle(
-                            fontSize: 12,
-                            color: Theme.of(context).primaryColor,
-                          ),
-                        ),
+                        LabelText(label: "viewDetails", color: Colors.black),
+                        SizedBox(width: 8),
                         Icon(
                           Icons.arrow_forward,
                           size: 16,
