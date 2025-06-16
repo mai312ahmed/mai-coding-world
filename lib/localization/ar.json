@@ -39,6 +39,7 @@
   "label_description": "الوصف",
   "label_features": "الميزات",
   "label_technologies_used": "التقنيات المستخدمة",
-  "label_open_project": "فتح المشروع"
+  "label_open_project": "فتح المشروع",
+  "languages": "اللغات"
 
 }

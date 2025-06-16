@@ -53,13 +53,12 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyAJzn22788NTFciDTNRXwWk3_lw7KajUrE',
-    appId: '1:418603793515:web:6e20ebf6a784a8f8f9c52e',
-    messagingSenderId: '418603793515',
-    projectId: 'mai-coding-world',
-    authDomain: 'mai-coding-world.firebaseapp.com',
-    storageBucket: 'mai-coding-world.firebasestorage.app',
-    measurementId: 'G-5CEYS7QN3V',
+    apiKey: 'AIzaSyAVGQRUb0oMosSU3l_-RZvl5dGwhKU32Ww',
+    appId: '1:398246676556:web:7e29b414aca165cddbcce9',
+    messagingSenderId: '398246676556',
+    projectId: 'portfolio-mai-3126',
+    authDomain: 'portfolio-mai-3126.firebaseapp.com',
+    storageBucket: 'portfolio-mai-3126.firebasestorage.app',
+    measurementId: 'G-B9M36278MF',
   );
-
 }

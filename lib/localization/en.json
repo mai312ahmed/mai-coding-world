@@ -39,5 +39,6 @@
   "label_description": "Description",
   "label_features": "Features",
   "label_technologies_used": "Technologies Used",
-  "label_open_project": "Open Project"
+  "label_open_project": "Open Project",
+  "languages": "Languages"
 }

@@ -11,42 +11,42 @@ import 'localization/app_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
 
 class FirebaseInitializer {
-  static final Completer<void> _completer = Completer();
+  static Completer<void>? _completer;
 
   static Future<void> ensureInitialized() async {
-    if (kIsWeb) {
-      await _initializeWeb();
-    } else {
-      await Firebase.initializeApp(
-        options: DefaultFirebaseOptions.currentPlatform,
-      );
-      _completer.complete();
+    if (_completer != null) {
+      return _completer!.future;
     }
-    return _completer.future;
-  }
 
-  static Future<void> _initializeWeb() async {
+    _completer = Completer();
+
     try {
-      await Future.delayed(const Duration(milliseconds: 500));
+      if (kIsWeb) {
+        await Future.delayed(const Duration(milliseconds: 500));
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+          name: 'WebApp',
+        );
+        final app = Firebase.app('WebApp');
+        log('Firebase Web App: ${app.name}');
+      } else {
+        await Firebase.initializeApp(
+          options: DefaultFirebaseOptions.currentPlatform,
+        );
+      }
 
-      await Firebase.initializeApp(
-        options: DefaultFirebaseOptions.currentPlatform,
-        name: 'WebApp',
-      );
-      final app = Firebase.app('WebApp');
-      log('Firebase Web App: ${app.name}');
-      _completer.complete();
+      _completer!.complete();
     } catch (e) {
-      _completer.completeError(e);
+      _completer!.completeError(e);
     }
+
+    return _completer!.future;
   }
 }
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
-
-  await FirebaseInitializer.ensureInitialized();
-
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
   runApp(const MyApp());
 }
 
@@ -61,7 +61,7 @@ class MyApp extends StatelessWidget {
         builder: (context, state) {
           return MaterialApp(
             debugShowCheckedModeBanner: false,
-            title: 'Mai’s Coding World',
+            title: 'Portfolio – Mai Abdalla',
             theme: ThemeData.dark().copyWith(
               colorScheme: ColorScheme.fromSeed(
                 seedColor: Colors.grey,

@@ -7,26 +7,23 @@ class ProjectImage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AspectRatio(
-      aspectRatio: 16 / 9,
-      child: ClipRRect(
-        borderRadius: BorderRadius.circular(12),
-        child: Image.asset(
-          image,
-          fit: BoxFit.fill,
-          width: double.infinity,
-          errorBuilder:
-              (_, __, ___) => Container(
-                color: Colors.grey[200],
-                child: const Center(
-                  child: Icon(
-                    Icons.broken_image_outlined,
-                    size: 100,
-                    color: Colors.black54,
-                  ),
+    return ClipRRect(
+      borderRadius: BorderRadius.circular(12),
+      child: Image.network(
+        image,
+        fit: BoxFit.fitHeight,
+        width: double.infinity,
+        errorBuilder:
+            (_, __, ___) => Container(
+              color: Colors.grey[200],
+              child: const Center(
+                child: Icon(
+                  Icons.broken_image_outlined,
+                  size: 100,
+                  color: Colors.black54,
                 ),
               ),
-        ),
+            ),
       ),
     );
   }
