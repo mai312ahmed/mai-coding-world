@@ -40,6 +40,12 @@
   "label_features": "الميزات",
   "label_technologies_used": "التقنيات المستخدمة",
   "label_open_project": "فتح المشروع",
-  "languages": "اللغات"
+  "languages": "اللغات",
+  "your_name": "اسمك",
+  "write_testimonial": "اكتب شهادتك",
+  "rating": "التقييم",
+  "submit_testimonial": "إرسال الشهادة",
+  "failedToAdd":"فشل في اضافة الشهادة" ,
+  "addTestimonial":"اضف شهادتك"        
 
 }

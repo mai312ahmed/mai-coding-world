@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mai_coding_world/core/constants/app_constans.dart';
 import 'package:mai_coding_world/core/widgets/hover_button.dart';
-import 'package:mai_coding_world/cubits/navigation_cubit.dart';
+import 'package:mai_coding_world/cubits/cubits/navigation_cubit.dart';
 
 class ButtonsSection extends StatelessWidget {
   const ButtonsSection({super.key});

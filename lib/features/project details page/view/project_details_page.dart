@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mai_coding_world/core/animations/fade_in_animation.dart';
 import 'package:mai_coding_world/core/animations/slide_in_animation.dart';
 import 'package:mai_coding_world/core/utils/screen_helper.dart';
 import 'package:mai_coding_world/core/widgets/keyboard_scroll_controller.dart';
-import 'package:mai_coding_world/cubits/language_cubit.dart';
+import 'package:mai_coding_world/cubits/cubits/language_cubit.dart';
+import 'package:mai_coding_world/features/project%20details%20page/widgets/text_section.dart';
 import 'package:mai_coding_world/features/project%20details%20page/widgets/features_section.dart';
 import 'package:mai_coding_world/features/project%20details%20page/widgets/image_section.dart';
 import 'package:mai_coding_world/features/project%20details%20page/widgets/project_url_section.dart';
 import 'package:mai_coding_world/features/project%20details%20page/widgets/technologies_section.dart';
-import 'package:mai_coding_world/core/widgets/app_texts.dart';
 import 'package:mai_coding_world/models/project_model/project_model.dart';
 
 class ProjectDetailsPage extends StatelessWidget {
@@ -91,26 +90,6 @@ class ProjectDetailsPage extends StatelessWidget {
             ],
           ),
         ),
-      ),
-    );
-  }
-}
-
-class TextSection extends StatelessWidget {
-  const TextSection({super.key, required this.text, required this.label});
-
-  final String text;
-  final String label;
-
-  @override
-  Widget build(BuildContext context) {
-    return FadeInAnimation(
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          BoldLable(lable: label),
-          DescreptionText(text: text, fontSize: 16, height: 1.6),
-        ],
       ),
     );
   }

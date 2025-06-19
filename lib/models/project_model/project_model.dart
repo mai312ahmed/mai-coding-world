@@ -70,18 +70,6 @@ class ProjectModel extends Equatable {
             : Languages.fromJson(json['languages'] as Map<String, dynamic>),
   );
 
-  Map<String, dynamic> toJson() => {
-    'title': title?.toJson(),
-    'description': description?.toJson(),
-    'features': features?.toJson(),
-    'technologies': technologies?.toJson(),
-    'status': status?.toJson(),
-    'client': client?.toJson(),
-    'projectLinks': projectLinks?.map((e) => e.toJson()).toList(),
-    'imageUrls': imageUrls,
-    'languages': languages?.toJson(),
-  };
-
   @override
   List<Object?> get props {
     return [

@@ -40,5 +40,12 @@
   "label_features": "Features",
   "label_technologies_used": "Technologies Used",
   "label_open_project": "Open Project",
-  "languages": "Languages"
+  "languages": "Languages",
+  "your_name": "Your Name",
+  "write_testimonial": "Write your testimonial",
+  "rating": "Rating",
+  "submit_testimonial": "Submit Testimonial",
+  "failedToAdd":"Failed to add testimonail",
+  "addTestimonial":"Add your testimonial"
+
 }

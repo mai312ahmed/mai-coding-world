@@ -9,13 +9,13 @@ const double smallHorizontalPadding = 50;
 final List<ContactInfo> contacts = [
   ContactInfo(
     label: "linkedin",
-    url: 'https://www.linkedin.com/in/your-profile',
+    url: 'https://www.linkedin.com/in/mai-ahmed-21209b155/',
     icon: FontAwesomeIcons.linkedin,
     color: Color(0xFF0A66C2),
   ),
   ContactInfo(
     label: "github",
-    url: 'https://github.com/your-username',
+    url: 'https://github.com/mai312ahmed',
     icon: FontAwesomeIcons.github,
     color: Colors.white,
   ),
@@ -27,7 +27,8 @@ final List<ContactInfo> contacts = [
   ),
   ContactInfo(
     label: "whatsapp",
-    url: 'https://wa.me/971566982496',
+    url:
+        "https://web.whatsapp.com/send/?phone=971566982496&text&type=phone_number&app_absent=0",
     icon: FontAwesomeIcons.whatsapp,
     color: Color(0xFF25D366),
   ),

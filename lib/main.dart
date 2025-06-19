@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:mai_coding_world/features/home/view/home.dart';
 import 'package:mai_coding_world/firebase_options.dart';
-import 'cubits/language_cubit.dart';
+import 'cubits/cubits/language_cubit.dart';
 import 'localization/app_localizations.dart';
 import 'package:firebase_core/firebase_core.dart';
 

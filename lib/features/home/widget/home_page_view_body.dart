@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mai_coding_world/core/widgets/keyboard_scroll_controller.dart';
-import 'package:mai_coding_world/cubits/navigation_cubit.dart';
+import 'package:mai_coding_world/cubits/cubits/navigation_cubit.dart';
 import 'package:mai_coding_world/features/about/view/about.dart';
 import 'package:mai_coding_world/features/contact/view/contact_section.dart';
 import 'package:mai_coding_world/features/header/view/header.dart';
@@ -45,7 +45,7 @@ class HomePageViewBody extends StatelessWidget {
                 const Divider(height: 0, endIndent: 50, indent: 50),
                 AboutMeSection(key: keys['about']),
                 const Divider(height: 0, endIndent: 50, indent: 50),
-                ProjectsSection(key: keys['projects']),
+                ProjectsSectionPage(key: keys['projects']),
                 const Divider(height: 0, endIndent: 50, indent: 50),
                 SkillsSection(key: keys['skills']),
                 const Divider(height: 0, endIndent: 50, indent: 50),

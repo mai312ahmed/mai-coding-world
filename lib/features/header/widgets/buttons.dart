@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mai_coding_world/core/widgets/hover_button.dart';
-import 'package:mai_coding_world/cubits/language_cubit.dart';
+import 'package:mai_coding_world/cubits/cubits/language_cubit.dart';
+import 'package:universal_html/html.dart' as html;
+import 'package:flutter/services.dart';
 
 class Buttons extends StatelessWidget {
   const Buttons({super.key});
@@ -11,7 +13,27 @@ class Buttons extends StatelessWidget {
     return Row(
       children: [
         HoverButton(
-          onPressed: () {},
+          onPressed: () async {
+            final data = await rootBundle.load(
+              'assets/cv/Mai_Abdalla_flutter_dev.cv.pdf',
+            );
+            final bytes = data.buffer.asUint8List();
+
+            final blob = html.Blob([bytes], 'application/pdf');
+            final url = html.Url.createObjectUrlFromBlob(blob);
+
+            final anchor =
+                html.AnchorElement(href: url)
+                  ..download = 'Mai Abdalla_flutter_dev.cv.pdf'
+                  ..style.display = 'none';
+
+            html.document.body?.append(anchor);
+            anchor.click();
+            Future.delayed(Duration(seconds: 1), () {
+              anchor.remove();
+              html.Url.revokeObjectUrl(url);
+            });
+          },
           text: "downloadCV",
           backgroundColor: Colors.blueAccent,
         ),

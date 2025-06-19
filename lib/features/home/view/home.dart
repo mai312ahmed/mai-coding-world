@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:mai_coding_world/cubits/navigation_cubit.dart';
+import 'package:mai_coding_world/cubits/cubits/navigation_cubit.dart';
 import 'package:mai_coding_world/features/home/widget/home_page_view_body.dart';
 
 class HomePage extends StatelessWidget {

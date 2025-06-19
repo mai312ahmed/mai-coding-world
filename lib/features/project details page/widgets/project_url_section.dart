@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:mai_coding_world/core/utils/helper_method.dart';
 import 'package:mai_coding_world/core/widgets/app_texts.dart';
-import 'package:mai_coding_world/cubits/language_cubit.dart';
+import 'package:mai_coding_world/cubits/cubits/language_cubit.dart';
 import 'package:mai_coding_world/models/project_model/project_link.dart';
 
 class ProjectUrlSection extends StatelessWidget {
